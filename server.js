@@ -7,12 +7,12 @@ import dotenv from 'dotenv'
 dotenv.config({ path: '.env.local' })
 
 const app = express()
-const PORT = 3001
+const PORT = 3002
 
 // Middleware
 app.use(express.json())
 app.use(cors({
-  origin: 'http://localhost:9002', // Updated to match your current port
+  origin: ['http://localhost:9001', 'http://localhost:9002'], // Allow both ports
   credentials: true
 }))
 
@@ -63,7 +63,7 @@ app.post('/api/snaptrade/login', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Proxy server running on http://localhost:${PORT}`)
   console.log(`📡 Using SnapTrade SDK for API calls`)
-  console.log(`🌐 Frontend should connect to: http://localhost:9002`)
+  console.log(`🌐 Frontend can connect from: http://localhost:9001 or http://localhost:9002`)
   console.log(`🔑 Using client ID: ${clientId}`)
   console.log(`🔑 Using consumer key: ${consumerKey ? '***' + consumerKey.slice(-4) : 'missing'}`)
 })

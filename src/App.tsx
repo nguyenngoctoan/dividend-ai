@@ -20,7 +20,7 @@ function App() {
 
     try {
       // Register user with SnapTrade
-      const response = await fetch('http://localhost:3001/api/snaptrade/register', {
+      const response = await fetch('http://localhost:3002/api/snaptrade/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ function App() {
       setConnectionStatus('User registered successfully! Now generating connection portal...')
 
       // Generate connection portal URL
-      const loginResponse = await fetch('http://localhost:3001/api/snaptrade/login', {
+      const loginResponse = await fetch('http://localhost:3002/api/snaptrade/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
