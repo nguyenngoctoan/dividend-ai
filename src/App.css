@@ -1,0 +1,234 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.connection-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.connect-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.connect-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.connect-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.status-message {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8f5e8;
+  color: #2d5a2d;
+  border-radius: 10px;
+  border-left: 4px solid #4caf50;
+  font-weight: 500;
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ffeaea;
+  color: #d32f2f;
+  border-radius: 10px;
+  border-left: 4px solid #f44336;
+  font-weight: 500;
+}
+
+/* Credentials Section */
+.credentials-section {
+  margin-top: 30px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border: 2px solid #e9ecef;
+  text-align: left;
+}
+
+.credentials-section h3 {
+  color: #495057;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.credential-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.credential-item strong {
+  min-width: 120px;
+  color: #495057;
+  font-weight: 600;
+}
+
+.credential-value {
+  background: #e9ecef;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  color: #495057;
+  border: 1px solid #ced4da;
+  word-break: break-all;
+  flex: 1;
+  margin-left: 15px;
+}
+
+.credential-note {
+  margin-top: 15px;
+  padding: 10px;
+  background: #fff3cd;
+  color: #856404;
+  border-radius: 8px;
+  border: 1px solid #ffeaa7;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Connection Section */
+.connection-section {
+  margin-top: 30px;
+  padding: 25px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border: 2px solid #e9ecef;
+}
+
+.connection-section h3 {
+  color: #495057;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.connection-section p {
+  color: #6c757d;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.connection-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+  margin-bottom: 20px;
+}
+
+.connection-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.6);
+}
+
+.url-preview {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.url-preview strong {
+  display: block;
+  color: #495057;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.url-text {
+  display: block;
+  background: #e9ecef;
+  padding: 12px;
+  border-radius: 8px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.8rem;
+  color: #495057;
+  border: 1px solid #ced4da;
+  word-break: break-all;
+  line-height: 1.4;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .connection-card {
+    padding: 30px 20px;
+  }
+  
+  .credential-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .credential-item strong {
+    min-width: auto;
+    margin-bottom: 8px;
+  }
+  
+  .credential-value {
+    margin-left: 0;
+    width: 100%;
+  }
+}
